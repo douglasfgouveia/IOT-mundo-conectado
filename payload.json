@@ -1,0 +1,16 @@
+{
+    "payload": {
+        "client": {
+                "user": "Douglas",
+                "password": "1234", 
+                "client_id": "123",
+                "SERVER": "broker.mqttdashboard.com", 
+                "PORT": 1883
+            },
+        "publish": {
+            "topic": "pucpr/iotmc/fazenda/temperatura", 
+            "message": 26
+        }
+        
+        }
+}
