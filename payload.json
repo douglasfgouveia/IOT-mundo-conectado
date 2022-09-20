@@ -1,16 +1,37 @@
 {
     "payload": {
         "client": {
-                "user": "Douglas",
-                "password": "1234", 
-                "client_id": "123",
-                "SERVER": "broker.mqttdashboard.com", 
-                "PORT": 1883
+                "user": "91acb1a0-3870-11ed-baf6-35fab7fd0ac8",
+                "password": "a92ebf0088b3b685000fdd90bd777603cfb3c96f", 
+                "client_id": "f3668bf0-3870-11ed-baf6-35fab7fd0ac8",
+                "server": "mqtt.mydevices.com", 
+                "port": 1883
             },
         "publish": {
             "topic": "pucpr/iotmc/fazenda/temperatura", 
             "message": 26
+        },
+
+        "subscribe": {
+            "topic": "v1/username/things/clientID/cmd/channel",
+            "message": ""
+        },
+        "fazenda1": {
+            "temperatura_inicial": 15,        
+            "device1": {
+                "temperatura": {
+                    "channel": "1"},
+                "umidade": {
+                    "channel": "0"},
+                "light": {
+                    "channel": "2"
+                }
         }
+        },
+        "device2": {
+            "channel": " "
+        }
+
         
         }
 }
