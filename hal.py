@@ -1,24 +1,29 @@
+import time
 import random 
-
 
 def temperatura(temperatura_inicial):
     return temperatura_inicial
 
-def drop_temperatura(valor_inicial):
-    valor_inicial +=2
-    return valor_inicial      
+def drop_temperatura(valor):
+    valor -= 2   
+    return valor
 
-def raise_temperatura(valor_inicial):
-    valor_inicial +=2
-    return valor_inicial     
+def raise_temperatura(valor):
+    valor +=2
+    return valor     
 
-def umidade():
-    return  random.randrange(10, 95)
+def umidade(umidade_inicial):
+   return umidade_inicial
 
 def aquecedor(estado: str):
-    if estado == "on":
-        return print("Aquecedor Ligado")
-    else: 
-        return print("Aquecedor Desligado")
-
-
+    temp = 0
+    while True:
+        if estado == "on":
+            temp_inicial = temperatura(raise_temperatura(temp))
+            temp_final = temp + temp_inicial
+            return print(f"temperatura atual subiu {temp_final}")
+        else: 
+            temp_inicial = temperatura(drop_temperatura(temp))
+            temp_final = temp + temp_inicial
+            return print(f"temperatura atual caiu {temp_final}")
+            # return print("Aquecedor Desligado")
